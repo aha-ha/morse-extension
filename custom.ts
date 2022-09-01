@@ -146,6 +146,7 @@ namespace morsecode {
      */
     //% block="Play Sound $val"
     export function playsound(val: string): void {
+        basic.pause(1000)
         if (val != "") {
             if (decoded.indexOf(val.toLowerCase().charAt(0)) != -1) {
                 //its plaintext
@@ -176,6 +177,7 @@ namespace morsecode {
      */
     //% block="Blink $morse"
     export function blink(morse: string): void {
+        basic.pause(1000)
         if (morse != "") {
             if (decoded.indexOf(morse.toLowerCase().charAt(0)) != -1) {
                 //its plaintext
